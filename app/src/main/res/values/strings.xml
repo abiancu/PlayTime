@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">PlayTime</string>
+    <string name="app_name">Play Time</string>
     <string name="action_settings">Settings</string>
     <string name="mExit">Exit</string>
     <string name="mGame1">Guess the Number</string>
     <string name="mGame2">Name the Capital</string>
+    <string name="mainActTitle">Welcome to the Game App</string>
 </resources>

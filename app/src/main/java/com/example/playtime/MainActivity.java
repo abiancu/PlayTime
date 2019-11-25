@@ -1,5 +1,6 @@
 package com.example.playtime;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -11,8 +12,9 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //ADD LISTENERS
+        Button btnNumGame = findViewById(R.id.btnGame1);
+        btnNumGame.setOnClickListener(this);
+
+        Button btnNameCap = findViewById(R.id.btnGame2);
+        btnNameCap.setOnClickListener(this);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +38,25 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    @Override public void onClick(View v){
+        Button btnGuessNum = findViewById(R.id.btnGame1);
+        Button btnNameCap = findViewById(R.id.btnGame2);
+
+        //go to another activity
+        //TODO: call the new activity method
+       switch (v.getId()){
+           case R.id.btnGame1:
+               gussNumActivity();
+               break;
+           case R.id.btnGame2:
+               nameCapActivity();
+               break;
+
+       }
+
+
     }
 
     @Override
@@ -52,4 +80,18 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    //intent methods
+    public void gussNumActivity(){
+        Intent intent = new Intent(MainActivity.this, GuessNumber.class);
+        this.startActivity(intent);
+    }
+
+    public void nameCapActivity(){
+        Intent intent = new Intent(MainActivity.this, NameCapital.class);
+        this.startActivity(intent);
+    }
+
+
 }

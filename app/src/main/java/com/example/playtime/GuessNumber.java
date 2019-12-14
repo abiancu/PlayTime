@@ -32,19 +32,6 @@ public class GuessNumber extends AppCompatActivity implements View.OnClickListen
         setSupportActionBar(toolbar);
 
 
-        /*Variables */
-        et_min = findViewById(R.id.et_min);
-        et_max = findViewById(R.id.et_max);
-        btn_Enter = findViewById(R.id.btnEnter);
-        tv_output = findViewById(R.id.tv_output);
-
-        /*seeding random numbers*/
-        rand = new Random();
-        btn_Enter.setOnClickListener(this);
-
-
-
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,17 +40,30 @@ public class GuessNumber extends AppCompatActivity implements View.OnClickListen
                         .setAction("Action", null).show();
             }
         });
+
+        rand = new Random();
+
+        /*Variables */
+        et_min = findViewById(R.id.et_min);
+        et_max = findViewById(R.id.et_max);
+        btn_Enter = findViewById(R.id.btnEnter);
+        tv_output = findViewById(R.id.tv_output);
+
+        btn_Enter.setOnClickListener(this);
+
+
     }
+
 
     @Override
     public void onClick(View v) {
-        /*local variables*/
+        //local variables
         String tempMin, tempMax;
 
         tempMin = et_min.getText().toString();
         tempMax = et_max.getText().toString();
 
-        if(tempMin.equals("") && !tempMax.equals("")){
+        if(!tempMin.equals("") && !tempMax.equals("")){
             min = Integer.parseInt(tempMin);
             max = Integer.parseInt(tempMax);
 
@@ -72,7 +72,7 @@ public class GuessNumber extends AppCompatActivity implements View.OnClickListen
                 output = rand.nextInt((max - min) + 1) + min;
 
                 //displaying the number
-                tv_output.setText(output);
+                tv_output.setText("" + output);
             }
 
         }

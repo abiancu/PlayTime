@@ -10,28 +10,29 @@
 
     <Button
         android:id="@+id/btnEnter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="221dp"
-        android:layout_marginBottom="406dp"
+        android:layout_width="78dp"
+        android:layout_height="52dp"
         android:text="Enter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/et_min"
         android:layout_width="315dp"
         android:layout_height="46dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginBottom="465dp"
         android:ems="10"
-        android:hint="min"
+        android:hint="@string/min"
         android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/et_max"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,13 +41,27 @@
         android:layout_width="303dp"
         android:layout_height="43dp"
         android:ems="10"
-        android:hint="max"
+        android:hint="@string/max"
         android:inputType="numberSigned"
         app:layout_constraintBottom_toTopOf="@+id/btnEnter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_min" />
+        app:layout_constraintTop_toBottomOf="@+id/et_min"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <EditText
+        android:id="@+id/userSelc"
+        android:layout_width="303dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="287dp"
+        android:layout_marginBottom="345dp"
+        android:ems="10"
+        android:hint="@string/yourSelc"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_output"
@@ -56,8 +71,24 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEnter"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintVertical_bias="0.356" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TextAppearance.AppCompat"
+        android:layout_width="317dp"
+        android:layout_height="101dp"
+
+        android:text="@string/instructions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

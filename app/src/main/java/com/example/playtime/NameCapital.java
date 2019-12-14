@@ -36,6 +36,9 @@ public class NameCapital extends AppCompatActivity{
         });
 
 
+        TextView county = findViewById(R.id.txtCountry);
+        TextView capital = findViewById(R.id.txtCapital);
+        Button btn_ncEnter = findViewById(R.id.btn_ncEnter);
     }
 
 }

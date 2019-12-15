@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".PlaySounds"
+            android:label="@string/title_activity_play_sounds"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".NameCapital"
             android:label="@string/title_activity_name_capital"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".GuessNumber"
             android:label="@string/title_activity_guess_number"

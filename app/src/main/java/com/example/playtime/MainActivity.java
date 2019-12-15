@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnNameCap = findViewById(R.id.btnGame2);
         btnNameCap.setOnClickListener(this);
 
+        Button btnSongs = findViewById(R.id.btnSongs);
+        btnSongs.setOnClickListener(this);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                break;
            case R.id.btnGame2:
                nameCapActivity();
+               break;
+           case R.id.btnSongs:
+               playSongs();
                break;
 
        }
@@ -90,6 +96,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void nameCapActivity(){
         Intent intent = new Intent(MainActivity.this, NameCapital.class);
+        this.startActivity(intent);
+    }
+
+    public void playSongs(){
+        Intent intent = new Intent(MainActivity.this, PlaySounds.class);
         this.startActivity(intent);
     }
 

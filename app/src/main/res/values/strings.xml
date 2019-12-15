@@ -4,7 +4,7 @@
     <string name="mExit">Exit</string>
     <string name="mGame1">Guess the Number</string>
     <string name="mGame2">Name the Capital</string>
-    <string name="mainActTitle">Welcome to the Game App</string>
+    <string name="mainActTitle">Welcome to the App</string>
     <string name="btnG1">Guess the Number</string>
     <string name="btnG2">Name the Capital</string>
     <string name="title_activity_guess_number">GuessNumber</string>
@@ -13,4 +13,6 @@
     <string name="max">Maximun Range</string>
     <string name="yourSelc">Enter your your number</string>
     <string name="instructions">Please select a minimun range and a maximun range, enter your selection and then press Enter to generate a random number</string>
+    <string name="title_activity_play_sounds">PlaySounds</string>
+    <string name="songs">Play Songs</string>
 </resources>

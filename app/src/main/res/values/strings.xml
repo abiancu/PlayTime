@@ -15,4 +15,11 @@
     <string name="instructions">Please select a minimun range and a maximun range, enter your selection and then press Enter to generate a random number</string>
     <string name="title_activity_play_sounds">PlaySounds</string>
     <string name="songs">Play Songs</string>
+    <string name="sound1">Play Song 1</string>
+    <string name="sound2">Play Song 2</string>
+    <string name="sound3">Play Song 3</string>
+    <string name="soundInstructions">click a button to start a stong</string>
+    <string name="soundTitle">Play a Song</string>
+    <string name="ncInstructions">Enter the capital of the country displayed. The program will determined if is correct.</string>
+
 </resources>

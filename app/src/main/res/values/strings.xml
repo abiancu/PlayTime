@@ -21,5 +21,9 @@
     <string name="soundInstructions">click a button to start a stong</string>
     <string name="soundTitle">Play a Song</string>
     <string name="ncInstructions">Enter the capital of the country displayed. The program will determined if is correct.</string>
+    <string name="country">Country:</string>
+    <string name="capital">Capital:</string>
+    <string name="btnEnter">Enter</string>
+    <string name="hint">Enter your answer here</string>
 
 </resources>

@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -19,9 +17,13 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Random;
 
 public class NameCapital extends AppCompatActivity{
+
+    TextView displayCountry;
+    String countryName;
+    InputStream country;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,6 @@ public class NameCapital extends AppCompatActivity{
         setContentView(R.layout.activity_name_capital);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -41,16 +42,28 @@ public class NameCapital extends AppCompatActivity{
             }
         });
 
+        //loadJSON();
 
-        TextView county = findViewById(R.id.txtCountry);
-        TextView capital = findViewById(R.id.txtCapital);
-        Button btn_ncEnter = findViewById(R.id.btn_ncEnter);
+        displayCountry = findViewById(R.id.txtCountryToGuess);
 
-        try {
-            JSONObject obj = new JSONObject(readJSONFromAsset());
-            JSONArray countries = obj.getJSONArray("samplecountry.json");
+        try
+        {
+            //getting the JSON file
+            JSONObject obj = new JSONObject(loadJSON());
 
-        } catch (JSONException e) {
+            //getting the JSON array
+            JSONArray countries = obj.getJSONArray("countries");
+
+            //loop through the list
+            for(int i = 0; i < countries.length(); i++)
+            {
+                //each object in the countries array
+                JSONObject name = countries.getJSONObject(i);
+                countryName = name.getString("country");
+                displayCountry.setText(countryName);
+            }
+
+        } catch (JSONException e){
             e.printStackTrace();
         }
 
@@ -58,19 +71,22 @@ public class NameCapital extends AppCompatActivity{
     }
 
 
-    public String readJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream input = getAssets().open("samplecountry.json");
-            int size = input.available();
+    //METHOD TO LOAD JSON FILE
+    public String loadJSON(){
+        String countries_json;
+        try
+        {
+            country = getAssets().open("samplecountry.json");
+            int size = country.available();
             byte[] buffer = new byte[size];
-            input.read(buffer);
-            input.close();
-            json = new String(buffer, "UTF-8");
-        }catch (IOException ex){
-            ex.printStackTrace();
-            return  null;
+            country.read(buffer);
+            country.close();
+            countries_json = new String(buffer, "UTF-8");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
-        return json;
+        return countries_json;
     }
 }

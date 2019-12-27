@@ -35,11 +35,39 @@
         android:layout_marginTop="132dp"
         android:layout_marginEnd="302dp"
         android:layout_marginBottom="511dp"
-        android:text="Country: "
+        android:text="@string/country"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCountryToGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="515dp"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDisplayCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="139dp" />
 
     <TextView
         android:id="@+id/txtCapital"
@@ -50,7 +78,7 @@
         android:layout_marginTop="192dp"
         android:layout_marginEnd="301dp"
         android:layout_marginBottom="446dp"
-        android:text="Capital:"
+        android:text="@string/capital"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +93,7 @@
         android:layout_marginTop="264dp"
         android:layout_marginEnd="199dp"
         android:layout_marginBottom="363dp"
-        android:text="Enter"
+        android:text="@string/btnEnter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +109,8 @@
         android:layout_marginBottom="441dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Enter answer here"
+        android:hint="@string/hint"
+        android:autofillHints="@string/hint"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +119,7 @@
 
     <TextView
         android:id="@+id/textView3"
+        style="@style/Widget.Design.TextInputLayout"
         android:layout_width="356dp"
         android:layout_height="40dp"
         android:layout_marginStart="26dp"
@@ -97,10 +127,10 @@
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="109dp"
         android:text="@string/ncInstructions"
-        style="@style/Widget.Design.TextInputLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
